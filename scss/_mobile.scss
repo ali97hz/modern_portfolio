@@ -3,6 +3,7 @@
 
 // Widescreens
 @include mediaXl {
+  //mikhaim safhe work.html k xl bod 4 soton dashte bashim
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -10,6 +11,7 @@
 
 // Desktops & Laptops
 @include mediaLg {
+  //mikhaim safhe work.html k lg bod 3 soton dashte bashim
   .projects {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -77,6 +79,7 @@
   }
 
   .projects {
+    //mikhaim safhe work.html k md bod 2 soton dashte bashim
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -97,6 +100,8 @@
   }
 
   .projects {
+    //mikhaim safhe work.html k lg bod 1 soton dashte bashim
+    //in manaie responsive na inke faqad hame chi kochik bshe az safhe faqad nazane biron
     grid-template-columns: 1fr;
   }
 }
