@@ -2,26 +2,36 @@
 .menu-btn {
   position: absolute;
   z-index: 3;
-  right: 35px;
-  top: 35px;
+  right: 35px; //from right
+  top: 35px; //from top
   cursor: pointer;
+  //toe main.scss aval config import shode bad menu
+  //faleza mishe inja easeout ro yoho include krd
   @include easeOut;
 
   .btn-line {
+    //har kdom az on se khat ertefae 3px , arze 28px
     width: 28px;
     height: 3px;
+    //faseleye beine khotot
+    //top right "bottum" left
     margin: 0 0 5px 0;
     background: set-text-color($primary-color);
     @include easeOut;
   }
 
   // Rotate Into X With Menu Lines
+  //darim in taqiirato vaqti ejra mikonim k .menu-btn
+  //classe "close" ro dre, yani vqti clicked shd
   &.close {
+    //in faqad icon ro 180 deg micharkhone
     transform: rotate(180deg);
 
+    //in do khate bala paiino zarbdar mikone va khate vasato hide
     .btn-line {
       // Line 1 - Rotate
       &:nth-child(1) {
+        //google "css transform": https://developer.mozilla.org/en-US/docs/Web/CSS/transform
         transform: rotate(45deg) translate(5px, 5px);
       }
 
@@ -38,12 +48,18 @@
   }
 }
 
+//azinja be baad ye alame class darim k mige vaqti show class
+//omad shoro kn ye sri taqirato emal kn
+//vase hmine k ye alame &.show darim
+
 // Menu Overlay
 .menu {
   position: fixed;
   top: 0;
   width: 100%;
+  //vase inke bg safhe qablo bbinim opacity gazatm mitoni to nazari
   opacity: 0.9;
+  //inke to safhe asli 4 ta iteme menu hide bashan
   visibility: hidden;
 
   &.show {
@@ -53,30 +69,35 @@
   &-branding,
   &-nav {
     display: flex;
-    flex-flow: column wrap;
-    align-items: center;
+    flex-flow: column wrap; //sotoni wrap she in 2 ta (ax va 4 items)
+    align-items: center; //toie sotone khodeshon vasat bashn
     justify-content: center;
     float: left;
-    width: 50%;
-    height: 100vh;
-    overflow: hidden;
+    width: 50%; //har kodom 50% width ro bgiran :)
+    height: 100vh; //100 slice of 100 piece
+    overflow: hidden; //we don't wanna overflow bars
   }
 
+  //sotone samte rastie menu
   &-nav {
     margin: 0;
     padding: 0;
-    background: darken($primary-color, 5);
-    list-style: none;
-    transform: translate3d(0, -100%, 0);
+    background: darken($primary-color, 5); //yekam dark tar az $primary-color
+    list-style: none; // on noqte haii ke knare hameye list icon ha miad ro bar midare
+    //google: translate3d, https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate3d
+    transform: translate3d(0, -100%, 0); //makane avaliash k in balaye safhast
     @include easeOut;
 
     &.show {
       // Slide in from top
+      //az bala miad paiin
       transform: translate3d(0, 0, 0);
     }
   }
 
+  //sotone samte chapie menu
   // Branding Side
+  // = .menu-branding
   &-branding {
     background: $primary-color;
     transform: translate3d(0, 100%, 0);
@@ -87,21 +108,24 @@
       transform: translate3d(0, 0, 0);
     }
 
+    //axe toie menu ke sotone samte rasti mibashe
     .portrait {
       width: 250px;
       height: 250px;
-      background: url('../img/portrait.jpg');
-      border-radius: 50%;
-      border: solid 3px $secondary-color;
+      background: url("../img/portrait.jpg");
+      border-radius: 50%; //dakhele circle bashe :)
+      border: solid 3px $secondary-color; //option haye circle
     }
   }
 
   .nav-item {
-    transform: translate3d(600px, 0, 0);
+    transform: translate3d(600px, 0, 0); //samte rast khareje safhe
     @include easeOut;
 
     &.show {
       // Slide in from right
+      //item hate sotone samte rast az rast vared mishan :)
+      //paiine safhe delay dadim vase hameye nav items
       transform: translate3d(0, 0, 0);
     }
 
@@ -110,6 +134,7 @@
     }
   }
 
+  //moshakhasate sotone raste menu
   .nav-link {
     display: inline-block;
     position: relative;
@@ -128,6 +153,8 @@
 }
 
 // Delay each nav item slide by 0.1s
+//vase ine k item ha mse olagh vared nashan
+//va har nav item ba ye delay sabr vared she
 @for $x from 1 through 4 {
   .nav-item:nth-child(#{$x}) {
     transition-delay: $x * 0.1s;

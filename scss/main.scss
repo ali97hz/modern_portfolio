@@ -1,46 +1,71 @@
-@import 'config';
-@import 'menu';
+//_config.scss ro import mikone
+@import "config";
+@import "menu";
 
+// set for every thing
 * {
+  // age pading dashte bashi toie box model negahesh midare
   box-sizing: border-box;
 }
 
 body {
+  //_config.scss
   @include background;
   background: $primary-color;
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  // space between lines vertically
   line-height: 1.5;
 }
 
-// Headings
+// Headings : header hamon
 h1,
 h2,
 h3 {
   margin: 0;
   font-weight: 400;
 
+  //{ inja teknike sass hastesh... va mese ine k to css benvisi
+  // h1.lg-heading...
+  // h2.lg-heading...
+  // h3.lg-heading...
+
+  // age & ro nazarim ye class joda mahsob mishe na inke
+  // nested shode bashe
   &.lg-heading {
     font-size: 6rem;
+    // 6 times of html font size,,,
+    //it can be default or you can change html font size
   }
 
   &.sm-heading {
     margin-bottom: 2rem;
+
+    // hashyeye dore <h2 ro mide ke az bg khodesho bekkane
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    //lighten , 0.5 ro gozashto=im vase opacity k akse poshtesh
+    //dide bshe,,, esme fuction ham delkhahe msln rgba gozashtim
+    background: rgba(lighten($primary-color, 2), 0.9);
   }
+  //}
 }
 
 a {
+  // range hame chi to index.html
   color: #fff;
+  // ezafat hame chi to index.html (az jomle under-line haye zaye
   text-decoration: none;
 }
 
 header {
+  //menu bottun hamishe bala bayad bashe hata age scroll kard
   position: fixed;
+  // mehvare z amod bar safhast va har che adadesh bozorgtar
+  //bashe be ma nazdik tare
   z-index: 2;
+  //kole screen ro begire
   width: 100%;
 }
 
@@ -49,26 +74,33 @@ header {
 }
 
 main {
+  //4rem az hame chi fasale migire
   padding: 4rem;
   // height: 100%;
   min-height: calc(100vh - 60px);
 
   .icons {
     margin-top: 1rem;
-
+    // inside of index.html each <i wraped in a <a
     a {
+      //fasele ofoghi beine icons
       padding: 0.4rem;
 
+      //roye icon raftim hover she be range zard bere
       &:hover {
         color: $secondary-color;
+        //tabe nvshtimesh ferestadim to _config.scss :)
         @include easeOut();
       }
     }
   }
-
+  // aln toye main iim va to hichi dige dakhele main nistim
+  //in khate paiin har chizi k idie home dashte bashe ro dar bar migire
   &#home {
+    //scrollbar nmikham
     overflow: hidden;
     h1 {
+      100(hundered)qesmatmikonevaonjaiimizare k adade shomast
       margin-top: 20vh;
     }
   }
@@ -78,8 +110,8 @@ main {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-    'bioimage bio bio'
-    'job1 job2 job3';
+    "bioimage bio bio"
+    "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
@@ -189,4 +221,4 @@ main {
   height: 60px;
 }
 
-@import 'mobile';
+@import "mobile";

@@ -1,10 +1,18 @@
+//baraye tamiz shdn codemon hame variables ro avordim inja :)
+
 $primary-color: #444;
 $secondary-color: #eece1a;
+//akse background
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
+//opacity bg ro azinja mmishe taqir dad mske
 $background-opacity: 0.9;
 
 @mixin easeOut {
+  // baes mishe faqad zard nashe yohoii balke
+  //ye transition(css animation) az dakhel be biron(ease-out) ke jlve ii bas zibast bma bde
+  //https://www.w3schools.com/Css/css3_transitions.asp
+  //mitonestimfaqadbgimcolor ama all gozashtim ke vase jaie dige ham bshe azsh estefade krd
   transition: all 0.5s ease-out;
 }
 
@@ -13,16 +21,26 @@ $background-opacity: 0.9;
     &#bg-img {
       background: $home-image;
       background-attachment: fixed;
+      //aks hameye safhe ro cover kone
       background-size: cover;
 
+      //in hamon overlay ya sayeie khakestary ke roye aks
+      // keshide shode hast vase khana bodn matn
+
+      //also in ye tricke css bdone html hast k asasn
+      //sudo element gizashtim postesh va lezem nis dege
+      //esme class ro toye html biarim
+      //va css bahash mse ye element shabihe #bg-img raftar mikone
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         right: 0;
         width: 100%;
         height: 100%;
         z-index: -1;
+        //red green blue alfa : mitone opacity dashte bashe
+        //ta akse bg zirsh dide she
         background: rgba($primary-color, $background-opacity);
       }
     }
