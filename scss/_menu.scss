@@ -129,6 +129,7 @@
       transform: translate3d(0, 0, 0);
     }
 
+    //onhover and the "current page" should be the $secondary-color
     &.current > a {
       color: $secondary-color;
     }
@@ -145,7 +146,7 @@
     color: set-text-color($primary-color);
     text-decoration: none;
     @include easeOut;
-
+    //"onhover" and the current page should be the $secondary-color
     &:hover {
       color: $secondary-color;
     }
