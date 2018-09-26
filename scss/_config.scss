@@ -47,6 +47,12 @@ $background-opacity: 0.9;
   }
 }
 
+//age yohoii eshghemon kshid ranga ro avaz konim
+//msln az khakestari sefid krdim yejahaii koln dige dide nmishe
+//baraye hale in moshkel in function ro nvshtim
+//baraye in function nvshtim k qarare ye meqdario return kne
+//dar hali k mixin mqdario retun nmikone
+//va bjaie gozashtane mostaqime color toie code az set-text-color($primary-color) estefade krdim
 // Set Text Color
 @function set-text-color($color) {
   @if (lightness($color) > 40) {
@@ -58,24 +64,36 @@ $background-opacity: 0.9;
 
 // Media Query Mixins
 @mixin mediaSm {
+  //esme mixin = mediaSm <--
+  //small screens
   @media screen and (max-width: 500px) {
+    //this means any css we put inside of here will only
+    //apply of the screen in 500px or less
+
+    //since this is a mixin, we are not gonna put our css in here
+    //I want to use this mixin elsewhere so all we do here is to put content
+    //so anything put inside this mixin in another file
+    //we can just add this mixin, It will automaticly put inside content
     @content;
   }
 }
 
 @mixin mediaMd {
+  //medium screens <-->
   @media screen and (max-width: 768px) {
     @content;
   }
 }
 
 @mixin mediaLg {
+  //large screens (768+1=769) <-->
   @media screen and (min-width: 769px) and (max-width: 1170px) {
     @content;
   }
 }
 
 @mixin mediaXl {
+  //extra large -->
   @media screen and (min-width: 1171px) {
     @content;
   }

@@ -1,3 +1,6 @@
+//ye library braye responsive bodn , screen haye mokhtalef sakhtim
+//ke toie config.scss manbaeshe
+
 // Widescreens
 @include mediaXl {
   .projects {
@@ -26,17 +29,25 @@
 
   ul.menu-nav,
   div.menu-branding {
+    //age safhe kochik shd kole arz ro bgire har kodom
+    //faleza bjaie 2 soton 2 satr dashtte bashim
+
     float: none;
     width: 100%;
     min-height: 0;
 
+    //va dar in halat mikhaim az chap va rast naian
+    //balke az bala paiin bian
     &.show {
       transform: translate3d(0, 0, 0);
     }
   }
 
   .menu-nav {
+    //75% az safheye menu ro 4 ta neveshte bgiran
     height: 75vh;
+    //va dar in halat mikhaim az chap va rast baian
+    //na az bala paiin bian
     transform: translate3d(-100%, 0, 0);
     font-size: 24px;
   }
@@ -46,19 +57,21 @@
     transform: translate3d(100%, 0, 0);
 
     .portrait {
-      background: url('../img/portrait_small.jpg');
+      //andaze axo taqiir dadim(kochik krdim)
+      background: url("../img/portrait_small.jpg");
       width: 150px;
       height: 150px;
     }
   }
 
+  //ghalebi ke item ha to namayeshgare kochik mse mobile qarar migirn
   .about-info {
     grid-template-areas:
-      'bioimage'
-      'bio'
-      'job1'
-      'job2'
-      'job3';
+      "bioimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
 
     grid-template-columns: 1fr;
   }
@@ -73,11 +86,12 @@
   main {
     padding: 2rem;
     #home h1 {
+      //vaqti ertefa ro km mikonim mikham fasele az bala hmchenan 10vh bashe
       margin-top: 10vh;
     }
 
     .lg-heading {
-      margin-top:1rem;
+      margin-top: 1rem;
       font-size: 5rem;
     }
   }

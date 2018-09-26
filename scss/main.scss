@@ -76,7 +76,11 @@ header {
 main {
   //4rem az hame chi fasale migire
   padding: 4rem;
-  // height: 100%;
+  //height: 100%; it's gonna be the 100% of content that is inside of it
+  //pas age content vasate safhe tmom she inam ta hmonja bishtar nmitone biad
+
+  //pas miaim az ye moteqaier estefade mikonim  ke kole 100% safhe ro dar nazar bgire va
+  //60px ke ekhtesas be footer dare ro azsh kam kne
   min-height: calc(100vh - 60px);
 
   .icons {
@@ -100,61 +104,59 @@ main {
     //scrollbar nmikham
     overflow: hidden;
     h1 {
-      100(hundered)qesmatmikonevaonjaiimizare k adade shomast
+      // 100(hundered)qesmat mikone va onjaii mizare k adade shomast
       margin-top: 20vh;
     }
   }
 }
 
 .about-info {
+  //for get everything in place we use grid
   display: grid;
-  grid-gap: 30px;
+  grid-gap: 30px; //faseleye beine soton ha
   grid-template-areas:
+  //ghalebi k qarare stuffes toie info namayesh dade bshn intorie
     "bioimage bio bio"
     "job1 job2 job3";
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); //mse ine k bgi (1fr  1fr  1fr),,, in 6 ta item bala ro toe 3 ta ston michine
 
   .bio-image {
+    // mse oni k to ".about-info" dadi bayad bashe
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
     border: $secondary-color 3px solid;
   }
-
   .bio {
     grid-area: bio;
     font-size: 1.5rem;
   }
-
   .job-1 {
     grid-area: job1;
   }
-
   .job-2 {
     grid-area: job2;
   }
-
   .job-3 {
     grid-area: job3;
   }
-
   .job {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
   }
 }
-
 // Work/Projects
 .projects {
   display: grid;
   grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr);
-
   img {
     width: 100%;
     border: 3px #fff solid;
-
     &:hover {
       opacity: 0.5;
       border-color: $secondary-color;
@@ -162,7 +164,6 @@ main {
     }
   }
 }
-
 // Contact Page
 .boxes {
   display: flex;
@@ -170,14 +171,12 @@ main {
   justify-content: space-evenly;
   align-items: center;
   margin-top: 1rem;
-
   div {
     font-size: 2rem;
     border: 3px #fff solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
     @include easeOut;
-
     &:hover {
       padding: 0.5rem 1.5rem;
       background: $secondary-color;
@@ -188,7 +187,6 @@ main {
     }
   }
 }
-
 // Button Styles
 .btn {
   display: block;
@@ -200,19 +198,16 @@ main {
     color: set-text-color($secondary-color);
   }
 }
-
 .btn-dark {
   @extend .btn;
   background: darken($primary-color, 50);
   color: #fff;
 }
-
 .btn-light {
   @extend .btn;
   background: lighten($primary-color, 50);
   color: #333;
 }
-
 #main-footer {
   text-align: center;
   padding: 1rem;
@@ -220,5 +215,4 @@ main {
   color: set-text-color($primary-color);
   height: 60px;
 }
-
 @import "mobile";
