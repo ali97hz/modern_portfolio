@@ -6,7 +6,7 @@
   "homepage": "https://ali97hz.github.io/modern_portfolio",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist" 
   },
   "author": "Alihz",
   "license": "MIT",
