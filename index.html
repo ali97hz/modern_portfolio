@@ -1,0 +1,98 @@
+<!-- just for the record we do this for showing you that we don't need Jquery for build a simple gallery site 
+that most of people do this wrong way and use Jquery for elementary thing which css can do :) -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- baraye dashtane icon haye kocholo mocholo va kheili nice
+     fontawesome.com - menu - how to use no the web -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Welcome To My Portfolio</title>
+  </head>
+
+  <body id="bg-img">
+    <header>
+      <!-- se khate toye header; called menu -->
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+      <!-- age on se khate menu ro bezani ina baz mishe -->
+      <nav class="menu">
+        <div class="menu-branding">
+          <div class="portrait"></div>
+        </div>
+        <ul class="menu-nav">
+          <!-- onhover and the "current" page should be the $secondary-color,,,
+           so the "current page" should be attached to the nav item-->
+          <li class="nav-item current">
+            <!-- href ha ham ke daran pas midan be ye page dige -->
+            <a href="index.html" class="nav-link">
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">
+              About Me
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">
+              My Work
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">
+              How To Reach Me
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="home">
+      <!-- lg = large,,, to sass khodemon sakhtim  -->
+      <h1 class="lg-heading">
+        Ali
+        <!-- baraye range zard span kardim ba classy ke toie sass hastesh -->
+        <span class="text-secondary">Hosseinzade</span>
+      </h1>
+      <!-- sm = small,,, to sass khodemon sakhtim -->
+      <h2 class="sm-heading">
+        Programmer, Electronic Engineer, Designer & Web Developer
+      </h2>
+
+      <!-- icon haye kocholo mocholo va kheili nice -->
+      <div class="icons">
+        <a href="https://twitter.com/Alihz97">
+          <i class="fab fa-twitter fa-2x"></i>
+        </a>
+        <a href="https://www.facebook.com/ali.iich.50">
+          <i class="fab fa-facebook fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/ali-hosseinzade-8a272516a/">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://github.com/ali97hz">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+      </div>
+    </main>
+    <!-- link be scripte asli -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
